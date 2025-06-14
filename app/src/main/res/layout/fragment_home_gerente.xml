@@ -1,0 +1,71 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeGerenteFragment"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Logo (opcional) -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera"
+            android:contentDescription="Logo"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Funcionários"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/texto"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Card com a lista de funcionários -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:radius="16dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFuncionarios"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scrollbars="vertical"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botão Criar Funcionário -->
+        <Button
+            android:id="@+id/btnCriarFuncionario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criar Funcionário"
+            android:backgroundTint="@color/botao"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp" />
+
+        <!-- Botão Criar Ronda -->
+        <Button
+            android:id="@+id/btnCriarRonda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criar Ronda"
+            android:backgroundTint="@color/botao"
+            android:textColor="@android:color/white"
+            android:padding="12dp" />
+    </LinearLayout>
+</ScrollView>

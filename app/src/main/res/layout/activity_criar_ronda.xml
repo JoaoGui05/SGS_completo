@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CriarRonda">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Nome da Ronda -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome da Ronda"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nomeRondaEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Horário de Início -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/horarioInicioTextView"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horário de Início"
+                android:layout_marginTop="12dp"
+                app:icon="@drawable/ic_clock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
+
+            <!-- Horário de Término -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/horarioFimTextView"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horário de Término"
+                android:layout_marginTop="8dp"
+                app:icon="@drawable/ic_clock"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
+
+            <!-- Título dos Funcionários -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecione os Funcionários:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="8dp" />
+
+            <!-- Checkboxes dinâmicos -->
+            <LinearLayout
+                android:id="@+id/listaFuncionariosLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Título dos Pontos -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pontos da Ronda:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="8dp" />
+
+            <!-- Lista de Pontos -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPontos"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical" />
+
+            <!-- Botão Adicionar Ponto -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdicionarPonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicionar Ponto"
+                android:layout_marginTop="8dp"
+                android:icon="@drawable/ic_location"
+                android:backgroundTint="@color/botao"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
+
+            <!-- Botão Salvar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSalvarRonda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salvar Ronda"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="@color/botao"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

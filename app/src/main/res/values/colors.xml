@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fundo">#E0E0E0</color> <!-- cinza claro -->
+    <color name="texto">#000000</color> <!-- preto -->
+    <color name="botao">#1A237E</color> <!-- azul escuro -->
+    <color name="branco">#FFFFFF</color> <!-- para texto nos botões -->
+    <color name="azul_escuro">#0D47A1</color>
+
+</resources>
